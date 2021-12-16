@@ -1,12 +1,13 @@
-import { GET_PRODUCTS_SUCCESS } from '../../actions';
+import { GET_PRODUCTS_SUCCESS } from '../actions';
 
 const products_reducers = (state, action) => {
-  if (action.type === GET_PRODUCTS_SUCCESS) {
-    return {
-      ...state,
-      products: action.payload,
-    };
+  switch (action.type) {
+    case GET_PRODUCTS_SUCCESS:
+      return { ...state, products: action.payload };
+    default:
+      return state;
   }
+  // throw new Error(`No matching "${action.type}" - action type `);
 };
 
 export default products_reducers;

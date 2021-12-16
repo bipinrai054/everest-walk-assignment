@@ -1,7 +1,8 @@
-import React from 'react';
-import axios from 'axios';
+import React, { useEffect, useContext, useReducer } from 'react';
+import reducer from '../reducers/productsReducers';
 import { products_url as url } from '../utils/constants';
-import { GET_PRODUCTS_SUCCESS } from '../../actions';
+import axios from 'axios';
+import { GET_PRODUCTS_SUCCESS } from '../actions';
 
 const initialState = {
   products: [],
@@ -9,8 +10,10 @@ const initialState = {
 
 const ProductsContext = React.createContext();
 
-const ProductsProvider = () => {
-  const fetchProducts = async (url) => {
+export const ProductsProvider = ({ children }) => {
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  const fetchProdducts = async (url) => {
     try {
       const response = await axios.get(url);
       const products = response.data.data.product;
@@ -21,7 +24,7 @@ const ProductsProvider = () => {
   };
 
   useEffect(() => {
-    fetchProducts(url);
+    fetchProdducts(url);
   }, []);
 
   return (
@@ -31,4 +34,6 @@ const ProductsProvider = () => {
   );
 };
 
-export default ProductsProvider;
+export const useProductsContext = () => {
+  return useContext(ProductsContext);
+};
