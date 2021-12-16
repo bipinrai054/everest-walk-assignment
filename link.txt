@@ -1,0 +1,2 @@
+ product : https://electronic-ecommerce.herokuapp.com/api/v1/product
+ image   : https://electronic-ecommerce.herokuapp.com/fantechHeadset.jpg
