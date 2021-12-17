@@ -26,10 +26,6 @@ const App = () => {
 };
 
 const Wrapper = styled.div`
-  * {
-    background-color: #36454f;
-  }
-
   .logo {
     text-align: center;
     margin: 3em;
@@ -37,7 +33,7 @@ const Wrapper = styled.div`
   .hero {
     display: flex;
     justify-content: center;
-    gap: 20em;
+    gap: 7em;
   }
 `;
 

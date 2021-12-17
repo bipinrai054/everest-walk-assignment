@@ -1,11 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
-import axios from 'axios';
 
 const SingleProduct = ({ product }) => {
   return (
     <Wrapper>
-      <div className='single-product'>{product.name}</div>;
+      <div className='single-product'>
+        <div className='product-name'>{product.name}</div>
+        <div className='price'>{product.price}</div>
+        <div className='stock'>{product.stock}</div>
+        <div className='category'>{product.category}</div>
+      </div>
     </Wrapper>
   );
 };
