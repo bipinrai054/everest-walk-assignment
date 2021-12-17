@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Button from './Button';
 
 const Filters = () => {
   return (
@@ -16,6 +17,9 @@ const Filters = () => {
             <option>laptop</option>
             <option>elcetronics</option>
           </select>
+        </div>
+        <div className='clear-btn'>
+          <Button>Clear Filters</Button>
         </div>
       </div>
     </Wrapper>

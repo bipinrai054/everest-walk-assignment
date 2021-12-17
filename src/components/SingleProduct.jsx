@@ -18,7 +18,7 @@ const SingleProduct = ({ product }) => {
           <label>Category</label>
           <div className='color'>{product.category}</div>
         </div>
-        <div className='button'>
+        <div className='add-to-cart-btn'>
           <Button>Add to cart</Button>
         </div>
       </div>
@@ -47,7 +47,7 @@ const Wrapper = styled.div`
   .color {
     color: #f2aa4cff;
   }
-  .button {
+  .add-to-cart-btn {
     margin-top: 2em;
     text-align: center;
   }
