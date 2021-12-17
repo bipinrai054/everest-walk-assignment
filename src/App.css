@@ -3,7 +3,8 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  background-color: black;
+  background-color: #101820ff;
   color: white;
   font-family: 'Roboto', sans-serif;
+  font-weight: bold;
 }
