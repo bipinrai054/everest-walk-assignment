@@ -1,7 +1,12 @@
 import styled from 'styled-components';
 import Button from './Button';
+import { getUniqueValues } from '../utils/helpers';
+import { useFilterContext } from '../context/filterContext';
 
 const Filters = () => {
+  const { all_products } = useFilterContext();
+  const categories = getUniqueValues(all_products, 'category');
+  console.log(categories);
   return (
     <Wrapper>
       <div className='filters'>
@@ -15,7 +20,10 @@ const Filters = () => {
           <select>
             <option>all</option>
             <option>laptop</option>
-            <option>elcetronics</option>
+            <option>keyboard</option>
+            <option>watch</option>
+            <option>mobile</option>
+            <option>headset</option>
           </select>
         </div>
         <div className='clear-btn'>

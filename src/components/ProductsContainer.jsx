@@ -9,7 +9,7 @@ const ProductsContainer = () => {
   return (
     <Wrapper>
       <div className='products-view'>
-        {products.map((product, index) => {
+        {products.map((product) => {
           return (
             <div>
               <Image />

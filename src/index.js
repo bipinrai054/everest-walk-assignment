@@ -2,10 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import { ProductsProvider } from './context/productsContext';
+import { FilterProvider } from './context/filterContext';
 
 ReactDOM.render(
   <ProductsProvider>
-    <App />
+    <FilterProvider>
+      <App />
+    </FilterProvider>
   </ProductsProvider>,
   document.getElementById('root'),
 );
